@@ -1,0 +1,7 @@
+selenium
+pytest==7.4.1
+Pillow
+allure-pytest==2.13.2
+visual-comparison==1.0.3
+visual_regression_tracker == 4.7.0
+webdriver_manager
