@@ -1,5 +1,5 @@
 from PIL import Image
 
-production = Image.open("/Users/elenayanushevskaya/python_qa_screenshot/images/example_product.png")
+production = Image.open("/Users/elenayanushevskaya/QAP/otus-visual-testing/images/example_product_tag.png")
 
 production.show()

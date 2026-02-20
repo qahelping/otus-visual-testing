@@ -31,7 +31,7 @@ def test_visual_comparison(browser):
     match_result = ImageComparisonUtil.check_match(master_path, staging_path)
     assert match_result
 
-@pytest.mark.only
+
 def test_visual_comparison_element(browser):
     master_path = make_tmp_file_path(browser, "prod")
     staging_path = make_tmp_file_path(browser, "staging")
@@ -39,12 +39,13 @@ def test_visual_comparison_element(browser):
 
     browser.get('https://global.wildberries.ru/')
     time.sleep(3)
+    _ = browser.find_element(By.CSS_SELECTOR, '[data-wba-header-name="Country"]').rect
     browser.find_element(By.CSS_SELECTOR, '[class="header j-header header--sticky"]').screenshot(master_path)
 
     browser.get('https://www.wildberries.by/')
     time.sleep(3)
-    browser.find_element(By.CSS_SELECTOR, '[class="header j-header"]').screenshot(staging_path)
-
+    _ = browser.find_element(By.CSS_SELECTOR, '.header__currency').rect
+    browser.find_element(By.CSS_SELECTOR, '[class="header j-header header--sticky"]').screenshot(staging_path)
 
     expected_image = ImageComparisonUtil.read_image(master_path)
     actual_image = ImageComparisonUtil.read_image(staging_path)

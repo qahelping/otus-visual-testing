@@ -21,15 +21,14 @@ def test_main_page_remove_elements(browser):
             element.remove();;
             """, element)
 
-    elements_prod = ['#popup-widget7437']
-    elements_stage = ['#popup-widget62629']
+    elements = ['[data-ux="ModalPopup"]']
     browser.get(PROD_BASE_URL)
-    time.sleep(3)  # We want slider swipe
-    remove_elements(browser, elements_prod)
+    time.sleep(3)
+    remove_elements(browser, elements)
     browser.save_screenshot(master_path)
 
     browser.get(STAGE_BASE_URL)
-    remove_elements(browser, elements_stage)
+    remove_elements(browser, elements)
     browser.save_screenshot(staging_path)
 
     comparison_test_light(master_path, staging_path, diff_path, clear_images=False)

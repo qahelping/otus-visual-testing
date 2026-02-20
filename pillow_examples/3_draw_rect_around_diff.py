@@ -45,7 +45,7 @@ def analyze(image_production, image_staging, col=COLS, row=ROWS):
 
 
     if has_diff:
-        production.save("/Users/elenayanushevskaya/python_qa_screenshot/images/example_product.pngexample_diff.png")
+        production.save("/Users/elenayanushevskaya/QAP/otus-visual-testing/images/example_product_diff.png")
         print("Images are not identical")
     else:
         print("Images are identical on: FACTOR {f}, COLS {c}, ROWS {r}".format(f=FACTOR, c=COLS, r=ROWS))
@@ -53,6 +53,6 @@ def analyze(image_production, image_staging, col=COLS, row=ROWS):
 
 if __name__ == "__main__":
     analyze(
-        "/Users/elenayanushevskaya/python_qa_screenshot/images/example_product.pngexample_product.png",
-        "/Users/elenayanushevskaya/python_qa_screenshot/images/example_product.pngexample_staging.png"
+        "/Users/elenayanushevskaya/QAP/otus-visual-testing/images/example_product.png",
+        "/Users/elenayanushevskaya/QAP/otus-visual-testing/images/example_staging.png"
     )

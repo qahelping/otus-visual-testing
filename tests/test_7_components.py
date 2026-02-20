@@ -20,6 +20,6 @@ def test_main_page_elements(browser):
 
     browser.get('https://www.wildberries.by/')
     time.sleep(3)
-    browser.find_element(By.CSS_SELECTOR, '[class="header j-header"]').screenshot(staging_path)
+    browser.find_element(By.CSS_SELECTOR, '[class="header j-header header--sticky"]').screenshot(master_path)
 
     comparison_test_light(master_path, staging_path, difference, clear_images=False)

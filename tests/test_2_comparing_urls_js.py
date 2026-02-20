@@ -11,9 +11,10 @@ from screenshots.helpers import comparison_test_light, make_tmp_file_path
 @allure.label("testType", "screenshotDiff")
 @allure.title("Comparing pages test with basic comparison and actions")
 def test_interactive_element(browser):
-    prod_screenshot_path = '/Users/elenayanushevskaya/Desktop/QAP/otus-visual-testing/test_screenshots/test_interactive_element/28e2c_staging.png'
-    # prod_screenshot_path = make_tmp_file_path(browser, "prod")
+    # prod_screenshot_path = '/Users/elenayanushevskaya/QAP/otus-visual-testing/test_screenshots/test_interactive_element/bc57a_staging.png'
+    prod_screenshot_path = make_tmp_file_path(browser, "prod")
     stag_screenshot_path = make_tmp_file_path(browser, "staging")
+    print(stag_screenshot_path)
     diff_screenshot_path = make_tmp_file_path(browser, "diff")
 
     for url, scr in [
