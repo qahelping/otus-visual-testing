@@ -39,7 +39,7 @@ def analyze(image_production, image_staging, col=COLS, row=ROWS):
                 draw = ImageDraw.Draw(production)
                 draw.rectangle(
                     (x - 1, y - 1, x + block_width, y + block_height),
-                    outline="red",
+                    outline="green",
                     width=2
                 )
 

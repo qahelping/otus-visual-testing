@@ -2,7 +2,7 @@ from visual_regression_tracker import VisualRegressionTracker, Config, TestRun
 
 config = Config(
     apiUrl='http://localhost:4200',
-    project='bb840b96-6c6f-4ed8-979b-e0bbfa3fdc3f',
+    project='1dff004f-37f0-40fb-9c53-3c13173b4375',
     apiKey='DEFAULTUSERAPIKEYTOBECHANGED',
     ciBuildId='commit_sha',
     branchName='develop',
